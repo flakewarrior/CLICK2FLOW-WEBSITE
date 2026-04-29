@@ -1,110 +1,67 @@
-/* General Styles */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   background: #f9f9f9;
   color: #333;
+  scroll-behavior: smooth;
 }
 
-header {
-  background: #ffffff;
-  padding: 20px;
+/* Hero */
+#hero {
+  background: linear-gradient(135deg, #0078d7, #6a0dad);
+  color: #fff;
   text-align: center;
-  border-bottom: 2px solid #e0e0e0;
+  padding: 100px 20px;
 }
-
-.logo {
-  height: 100px;
+.hero-logo { height: 120px; margin-bottom: 20px; }
+.btn-primary {
+  background: #fff; color: #0078d7;
+  padding: 12px 25px; border-radius: 6px;
+  text-decoration: none; font-weight: bold;
+  transition: 0.3s;
 }
+.btn-primary:hover { background: #f0f0f0; transform: scale(1.05); }
 
+/* Navigation */
 nav {
-  background: #0078d7;
-  padding: 10px;
-  text-align: center;
+  background: #0078d7; padding: 10px; text-align: center;
+  position: sticky; top: 0; z-index: 1000;
 }
+nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
 
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+/* Sections */
+section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+h2 { color: #0078d7; }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h2 {
-  color: #0078d7;
-}
-
+/* Service Cards */
 .service-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background: #fff; border: 1px solid #ddd; border-radius: 8px;
+  padding: 20px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  opacity: 0; transform: translateY(20px); transition: all 0.6s ease;
 }
+.service-card.visible { opacity: 1; transform: translateY(0); }
 
-footer {
-  background: #0078d7;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
+/* Footer */
+footer { background: #0078d7; color: #fff; text-align: center; padding: 15px; margin-top: 40px; }
 
-/* Chatbot Styles */
+/* Chatbot */
 #chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  height: 400px;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  overflow: hidden;
+  position: fixed; bottom: 70px; right: 20px;
+  width: 300px; height: 400px; background: #fff;
+  border: 1px solid #ddd; border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); overflow: hidden;
 }
+#chatbot-header { background: #0078d7; color: #fff; padding: 10px; font-weight: bold; text-align: center; }
+#chatbot-messages { height: 300px; padding: 10px; overflow-y: auto; font-size: 14px; }
+#chatbot-input { display: flex; border-top: 1px solid #ddd; }
+#chatbot-input input { flex: 1; border: none; padding: 10px; }
+#chatbot-input button { background: #0078d7; color: #fff; border: none; padding: 10px 15px; cursor: pointer; }
 
-#chatbot-header {
-  background: #0078d7;
-  color: #fff;
-  padding: 10px;
-  font-weight: bold;
-  text-align: center;
-}
-
-#chatbot-messages {
-  height: 300px;
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 14px;
-}
-
-#chatbot-input {
-  display: flex;
-  border-top: 1px solid #ddd;
-}
-
-#chatbot-input input {
-  flex: 1;
-  border: none;
-  padding: 10px;
-}
-
-#chatbot-input button {
-  background: #0078d7;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
+/* Toggle Button */
+#chatbot-toggle {
+  position: fixed; bottom: 20px; right: 20px;
+  background: #0078d7; color: #fff; font-size: 24px;
+  padding: 10px; border-radius: 50%; cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
