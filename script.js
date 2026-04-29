@@ -1,4 +1,3 @@
-// Chatbot UI setup
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("chatbot-container");
   container.innerHTML = `
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     addMessage("You", userText);
     input.value = "";
 
-    // Simple responses (English + Kiswahili)
     if (/service|huduma/i.test(userText)) {
       addMessage("Bot", "We offer automation services: Chatbots, Booking, Payments, Notifications.");
     } else if (/price|bei/i.test(userText)) {
@@ -38,5 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addMessage("Bot", "Samahani, tafadhali uliza kuhusu huduma, bei, au mawasiliano.");
     }
   });
-});
 
+  // Toggle button
+  const toggleBtn = document.getElementById("chatbot-toggle");
+  toggleBtn.addEventListener("click", ()
