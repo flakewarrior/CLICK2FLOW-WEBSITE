@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -59,3 +60,52 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
+
+/* Chatbot Styles */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+#chatbot-header {
+  background: #0078d7;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#chatbot-messages {
+  height: 300px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chatbot-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chatbot-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+
+#chatbot-input button {
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
